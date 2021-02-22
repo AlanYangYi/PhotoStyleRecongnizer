@@ -1,4 +1,4 @@
-# GayPhotoStyleRecongnizer
+# PhotoStyleRecongnizer
 Recognize the photo style belonging gays by using CNN
 
 
