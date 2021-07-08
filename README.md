@@ -1,6 +1,28 @@
 # PhotoStyleRecongnizer
 Recognize the stlyle of photo taken by differnt sexual orientation's people  by using CNN
 
+1 Use vgg19 feature layer and classification layer, freezing the parameters of vgg19 feature layer, and train classification layer parameters (transfer learning)
+
+2 The optimizer chooses SGD. And at first tried to use Adam , but found that it is not suitable to freeze most layers of transfer learning and it shows that  the training set will converge difficultly.
+
+3 Use the Dropout layer to prevent overfitting
+
+4 In this experiment, the 98% accuracy rate identification of the training data was realized, and the 80% accuracy rate identification of the verification data was realized.
+
+5 The average recognition accuracy rate of different test sets is about 60%. (The human recognition rate of the test set is about 45%. The test set address: link: https://pan.baidu.com/s/1oxp233_a0bXsWOhhrovY_g Extraction code: at0h)
+
+6 The low accuracy rate may be due to the fact that the photos of straight men and gays are not very recognizable overall, which means that the distribution of differences between the photos of straight men and gays on social app will not be too different.
+That means for most of the photos, it is difficult to accurately judge by the photos.
+7 Later, the thermal activation map Grad-Cam was used to identify the activation area of the network
+reference: https://arxiv.org/abs/1610.02391
+
+
+8 Download URL of trained model:
+Link: https://pan.baidu.com/s/1hepPgcbTX7vTvVHJmlGiiA Extraction code: uzwh (requires python environment or conda prompt)
+
+* Photo data source: crawled from social apps
+
+
 
 1 使用vgg19特征层+分类层，冻结vgg19特征层的参数，训练分类层参数（迁移学习）
 
