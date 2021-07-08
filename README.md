@@ -1,5 +1,5 @@
 # PhotoStyleRecongnizer
-Recognize the photo style belonging gays by using CNN
+Recognize the stlyle of photo taken by differnt sexual orientation's people  by using CNN
 
 
 1 使用vgg19特征层+分类层，冻结vgg19特征层的参数，训练分类层参数（迁移学习）
@@ -22,3 +22,4 @@ https://arxiv.org/abs/1610.02391
 8训练编译好的模型下载地址：
 链接:https://pan.baidu.com/s/1hepPgcbTX7vTvVHJmlGiiA 提取码:uzwh  （需要python环境或conda prompt）
 
+* 照片数据来源：从社交app上爬取
