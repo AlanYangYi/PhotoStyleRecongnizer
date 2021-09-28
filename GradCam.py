@@ -95,20 +95,17 @@ def heatmap(x):
         activations[:, i, :, :] *= mean_gradients[i]
     # 计算所有通道的均值输出得到热力图
     heatmap = torch.mean(activations, dim=1).squeeze()
-    # 使用relu函数作用于热力图
     heatmap = F.relu(heatmap)
     # 对热力图进行标准化
     heatmap /= torch.max(heatmap)
     heatmap = heatmap.numpy()
     # 可视化热力图
-    # plt.matshow(heatmap)
     img = cv2.imread(x)
     heatmap = cv2.resize(heatmap, (img.shape[1], img.shape[0]))
     heatmap = np.uint8(255 * heatmap)
     heatmap = cv2.applyColorMap(heatmap, cv2.COLORMAP_JET)
     Grad_cam_img = heatmap * 0.4 + img
     Grad_cam_img = Grad_cam_img / Grad_cam_img.max()
-    ## 可视化图像
     b, g, r = cv2.split(Grad_cam_img)
     Grad_cam_img = cv2.merge([r, g, b])
     plt.figure()
